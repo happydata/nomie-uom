@@ -226,6 +226,6 @@ var NomieUOM = function () {
 	pub.abv = function (key) {
 		return (pub.uoms.hasOwnProperty(key)) ? pub.uoms[key].symbol : null;
 	};
-	return self;
+	return pub;
 
 };
