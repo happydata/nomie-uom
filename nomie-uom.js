@@ -30,7 +30,7 @@ var NomieUOM = function () {
 			symbol: 'count',
 			type: 'general'
 		},
-		reps: {
+    reps: {
 			singular: 'Rep',
 			plural: 'Reps',
 			symbol: 'reps',
@@ -101,6 +101,18 @@ var NomieUOM = function () {
 			plural: 'Inches',
 			symbol: 'in',
 			type: 'distance'
+		},
+    		celsius: {
+			singular: 'Celsius',
+			plural: 'Celsius',
+			symbol: '°C',
+			type: 'temperature'
+		},
+    		fahrenheit: {
+			singular: 'Fahrenheit',
+			plural: 'Fahrenheit',
+			symbol: '°F',
+			type: 'temperature'
 		},
 		foot: {
 			singular: 'Foot',
