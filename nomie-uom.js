@@ -39,7 +39,7 @@ var NomieUOM = function () {
 		happys: {
 			singular: 'Happy',
 			plural: 'Happys',
-			symbol: 'happy',
+			symbol: 'HPY',
 			type: 'general'
 		},
 		dollars: {
