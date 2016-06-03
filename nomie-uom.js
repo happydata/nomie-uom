@@ -39,32 +39,67 @@ var NomieUOM = function () {
 		happys: {
 			singular: 'Happy',
 			plural: 'Happys',
-			symbol: 'HPY',
+			symbol: ':)',
 			type: 'general'
 		},
 		dollars: {
 			singular: 'Dollar',
 			plural: 'Dollars',
 			symbol: '$',
-			type: 'general'
+			type: 'currency',
+      symbolAffix : 'pre'
+		},
+    peso: {
+			singular: 'Peso',
+			plural: 'Peso',
+			symbol: '$',
+			type: 'currency',
+      symbolAffix : 'pre'
+		},
+    cpound: {
+			singular: 'Pound',
+			plural: 'Pounds',
+			symbol: '£',
+			type: 'currency',
+      symbolAffix : 'pre'
+		},
+    yen: {
+			singular: 'Yen',
+			plural: 'Yen',
+			symbol: '¥',
+			type: 'currency',
+      symbolAffix : 'pre'
+		},
+    euro: {
+			singular: 'Euro',
+			plural: 'Euros',
+			symbol: '€',
+			type: 'currency',
+      symbolAffix : 'pre'
 		},
 		sec: {
 			singular: 'Second',
 			plural: 'Seconds',
 			symbol: 'secs',
-			type: 'time'
+			type: 'time',
+      symbolAffix : 'post',
+      symbolSpace : true
 		},
 		min: {
 			singular: 'Minute',
 			plural: 'Minutes',
 			symbol: 'mins',
-			type: 'time'
+			type: 'time',
+      symbolAffix : 'post',
+      symbolSpace : true
 		},
 		hour: {
 			singular: 'Hour',
 			plural: 'Hours',
 			symbol: 'hrs',
-			type: 'time'
+			type: 'time',
+      symbolAffix : 'post',
+      symbolSpace : true
 		},
 		day: {
 			singular: 'Day',
@@ -82,73 +117,93 @@ var NomieUOM = function () {
 			singular: 'Centimeter',
 			plural: 'Centimeters',
 			symbol: 'cm',
-			type: 'distance'
+			type: 'distance',
+      symbolAffix : 'post',
+      symbolSpace : true
 		},
 		meter: {
 			singular: 'Meter',
 			plural: 'Meter',
 			symbol: 'm',
-			type: 'distance'
+			type: 'distance',
+      symbolAffix : 'post',
+      symbolSpace : true
 		},
 		km: {
 			singular: 'Kilometer',
 			plural: 'Kilometers',
 			symbol: 'km',
-			type: 'distance'
+			type: 'distance',
+      symbolAffix : 'post',
+      symbolSpace : true
 		},
 		inch: {
 			singular: 'Inch',
 			plural: 'Inches',
 			symbol: 'in',
-			type: 'distance'
+			type: 'distance',
+      symbolAffix : 'post',
+      symbolSpace : true
 		},
     		celsius: {
 			singular: 'Celsius',
 			plural: 'Celsius',
 			symbol: '°C',
-			type: 'temperature'
+			type: 'temperature',
+      symbolAffix : 'post',
+      symbolSpace : true
 		},
     		fahrenheit: {
 			singular: 'Fahrenheit',
 			plural: 'Fahrenheit',
 			symbol: '°F',
-			type: 'temperature'
+			type: 'temperature',
+      symbolAffix : 'post',
+      symbolSpace : true
 		},
 		foot: {
 			singular: 'Foot',
 			plural: 'Feet',
 			symbol: 'ft',
-			type: 'distance'
+			type: 'distance',
+      symbolAffix : 'post',
+      symbolSpace : true
 		},
 		yard: {
 			singular: 'Yard',
 			plural: 'Yards',
 			symbol: 'yrds',
-			type: 'distance'
+			type: 'distance',
+      symbolAffix : 'post',
+      symbolSpace : true
 		},
 		mile: {
 			singular: 'Mile',
 			plural: 'Miles',
-			symbol: 'miles',
-			type: 'distance'
+			symbol: 'mi',
+			type: 'distance',
+      symbolAffix : 'post'
 		},
 		mg: {
 			singular: 'Milligram',
 			plural: 'Milligrams',
 			symbol: 'mg',
-			type: 'weight'
+			type: 'weight',
+      symbolAffix : 'post'
 		},
 		gram: {
 			singular: 'Gram',
 			plural: 'Grams',
 			symbol: 'g',
-			type: 'weight'
+			type: 'weight',
+      symbolAffix : 'post'
 		},
 		kg: {
 			singular: 'Kilogram',
 			plural: 'Kilograms',
 			symbol: 'kg',
-			type: 'weight'
+			type: 'weight',
+      symbolAffix : 'post'
 		},
 		strone: {
 			singular: 'Stone',
@@ -156,17 +211,30 @@ var NomieUOM = function () {
 			symbol: 'st',
 			type: 'weight'
 		},
-		oz: {
+
+    oz: {
 			singular: 'Ounce',
 			plural: 'Ounces',
 			symbol: 'oz',
-			type: 'weight'
+			type: 'weight',
+      symbolAffix : 'post',
+      symbolSpace : true
 		},
 		pound: {
 			singular: 'Pound',
 			plural: 'Pounds',
 			symbol: 'lbs',
-			type: 'weight'
+			type: 'weight',
+      symbolAffix : 'post',
+      symbolSpace : true
+		},
+    cup: {
+			singular: 'Cup',
+			plural: 'Cups',
+			symbol: 'cups',
+			type: 'volume',
+      symbolAffix : 'post',
+      symbolSpace : true
 		},
 		fluidounce: {
 			singular: 'Fluid Ounce',
@@ -184,25 +252,32 @@ var NomieUOM = function () {
 			singular: 'Quart',
 			plural: 'Quarts',
 			symbol: 'qt',
-			type: 'volume'
+			type: 'volume',
+      symbolAffix : 'post'
 		},
 		gallon: {
 			singular: 'Gallon',
 			plural: 'Gallons',
 			symbol: 'gal',
-			type: 'volume'
+			type: 'volume',
+      symbolAffix : 'post',
+      symbolSpace : true
 		},
 		liter: {
 			singular: 'Liter',
 			plural: 'Liters',
 			symbol: 'L',
-			type: 'volume'
+			type: 'volume',
+      symbolAffix : 'post',
+      symbolSpace : false
 		},
 		milliliter: {
 			singular: 'Milliliter',
 			plural: 'Milliliters',
 			symbol: 'ml',
-			type: 'volume'
+			type: 'volume',
+      symbolAffix : 'post',
+      symbolSpace : false
 		}
 	};
 	pub.toArray = function () {
@@ -210,6 +285,7 @@ var NomieUOM = function () {
 		for (var uom in pub.uoms) {
 			var item = pub.uoms[uom];
 			item.uom = uom;
+      uom.symbolAffix = uom.symbolAffix || null;
 			items.push(item);
 		}
 		return items;
@@ -226,7 +302,6 @@ var NomieUOM = function () {
 				items[item.type] = [item];
 			}
 		}
-		console.log("Grouped UOM Array", items);
 		return items;
 	};
 	pub.plural = function (key) {
@@ -238,6 +313,27 @@ var NomieUOM = function () {
 	pub.abv = function (key) {
 		return (pub.uoms.hasOwnProperty(key)) ? pub.uoms[key].symbol : null;
 	};
+  pub.displayValue = function(key, value) {
+
+    if(pub.uoms.hasOwnProperty(key)) {
+      var symbol = pub.uoms[key].symbol || null;
+      var affix = pub.uoms[key].symbolAffix || null;
+      var space = (pub.uoms[key].symbolSpace || false) ? ' ' : '';
+
+      if(affix&&symbol&&value) {
+
+        if(affix=='pre') {
+          return symbol + space+ value;
+        } else {
+          return value + space + symbol;
+        }
+      } else {
+        return value;
+      }
+    } else {
+      return value;
+    }
+  }
 	return pub;
 
 };
