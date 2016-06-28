@@ -334,7 +334,7 @@ var NomieUOM = function() {
 
 	pub.displayValue = function(key, value) {
 
-		if(!isNaN(parseFloat(value)) && isFinite(value)) {
+		if(!isNaN(parseFloat(value)) && isFinite(value) && value !== 0) {
 			value = pub.addCommas(value);
 		}
 		if (pub.uoms.hasOwnProperty(key)) {
