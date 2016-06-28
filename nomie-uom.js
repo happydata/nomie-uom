@@ -333,7 +333,8 @@ var NomieUOM = function() {
 	};
 
 	pub.displayValue = function(key, value) {
-		if(!isNaN(value)) {
+
+		if(!isNaN(parseFloat(value)) && isFinite(value)) {
 			value = pub.addCommas(value);
 		}
 		if (pub.uoms.hasOwnProperty(key)) {
