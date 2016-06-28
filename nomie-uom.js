@@ -151,7 +151,7 @@ var NomieUOM = function() {
 			symbol: '°C',
 			type: 'temperature',
 			symbolAffix: 'post',
-			symbolSpace: true
+			symbolSpace: false
 		},
 		fahrenheit: {
 			singular: 'Fahrenheit',
@@ -159,7 +159,7 @@ var NomieUOM = function() {
 			symbol: '°F',
 			type: 'temperature',
 			symbolAffix: 'post',
-			symbolSpace: true
+			symbolSpace: false
 		},
 		foot: {
 			singular: 'Foot',
