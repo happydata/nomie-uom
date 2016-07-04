@@ -47,7 +47,10 @@ var NomieUOM = function() {
 			plural: 'Dollars',
 			symbol: '$',
 			type: 'currency',
-			symbolAffix: 'pre'
+			symbolAffix: 'pre',
+			display: function(v) {
+				return "$" + pub.addCommas((Number(v) === v && v % 1 !== 0) ? v.toFixed(2) : v);
+			}
 		},
 		peso: {
 			singular: 'Peso',
@@ -83,7 +86,14 @@ var NomieUOM = function() {
 			symbol: 'secs',
 			type: 'time',
 			symbolAffix: 'post',
-			symbolSpace: true
+			symbolSpace: true,
+			display: function(v) {
+				if (v < 3600) {
+					return v + 's';
+				} else {
+					return (v / 60).toFixed(0) + 'm';
+				}
+			}
 		},
 		min: {
 			singular: 'Minute',
@@ -91,7 +101,18 @@ var NomieUOM = function() {
 			symbol: 'm',
 			type: 'time',
 			symbolAffix: 'post',
-			symbolSpace: false
+			symbolSpace: false,
+			display: function(v) {
+				if (v < 60) {
+					return v + 'm';
+				} else if (v > 60 && v < 1441) {
+					return (v / 60).toFixed(1) + 'h';
+				} else if (v > 1440) {
+					return (v / 1440).toFixed(0) + 'd';
+				} else {
+					return v + 'm';
+				}
+			}
 		},
 		hour: {
 			singular: 'Hour',
@@ -99,7 +120,14 @@ var NomieUOM = function() {
 			symbol: 'hrs',
 			type: 'time',
 			symbolAffix: 'post',
-			symbolSpace: false
+			symbolSpace: false,
+			display: function(v) {
+				if (v < 168) {
+					return v.toFixed(0) + 'h';
+				} else {
+					return (v / 24).toFixed(0) + 'd';
+				}
+			}
 		},
 		day: {
 			singular: 'Day',
@@ -318,8 +346,13 @@ var NomieUOM = function() {
 		return (pub.uoms.hasOwnProperty(key)) ? pub.uoms[key].symbol : null;
 	};
 
+	/**
+	 * pub.addCommas
+	 * Formats a number with commas
+	 * 
+	 * @param {number} Number to format
+	 */
 	pub.addCommas = function(num) {
-
 		num += '';
 		x = num.split('.');
 		x1 = x[0];
@@ -329,33 +362,45 @@ var NomieUOM = function() {
 			x1 = x1.replace(rgx, '$1' + ',' + '$2');
 		}
 		return x1 + x2;
-
 	};
 
+	/**
+	 * pub.displayValue
+	 * Display Formated Value of a UOM and a Value
+	 */
 	pub.displayValue = function(key, value) {
-
-		if(!isNaN(parseFloat(value)) && isFinite(value) && value !== 0) {
-			value = pub.addCommas(value);
-		}
-		if (pub.uoms.hasOwnProperty(key)) {
+		if (pub.uoms.hasOwnProperty(key) && value) {
+			//console.log("### UOM ### UOM TYPE FOUND", key);
 			var symbol = pub.uoms[key].symbol || null;
 			var affix = pub.uoms[key].symbolAffix || null;
 			var space = (pub.uoms[key].symbolSpace || false) ? ' ' : '';
 
-			if (affix && symbol && value) {
+			// Get display formatter for key if one exists.
+			var displayFormatter = pub.uoms[key].display || null;
 
-				if (affix == 'pre') {
-					return symbol + space + value;
-				} else {
-					return value + space + symbol;
-				}
+			// Does the UOM have it's own display formatter?
+			if (displayFormatter) {
+				return displayFormatter(value) // displayFormatter(v);
 			} else {
-				return value;
-			}
+				if (!isNaN(parseFloat(value)) && isFinite(value) && value !== 0) {
+					value = pub.addCommas(value);
+				}
+				if (affix && symbol && value) {
+					if (affix == 'pre') {
+						return symbol + space + value;
+					} else {
+						return value + space + symbol;
+					}
+				} else {
+					return value;
+				}
+			} // end if the uom has it's own display 
 		} else {
 			return value;
 		}
 	}
+
+	// Return the public object.
 	return pub;
 
 };
