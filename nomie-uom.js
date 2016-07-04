@@ -88,10 +88,10 @@ var NomieUOM = function() {
 		min: {
 			singular: 'Minute',
 			plural: 'Minutes',
-			symbol: 'mins',
+			symbol: 'm',
 			type: 'time',
 			symbolAffix: 'post',
-			symbolSpace: true
+			symbolSpace: false
 		},
 		hour: {
 			singular: 'Hour',
@@ -99,7 +99,7 @@ var NomieUOM = function() {
 			symbol: 'hrs',
 			type: 'time',
 			symbolAffix: 'post',
-			symbolSpace: true
+			symbolSpace: false
 		},
 		day: {
 			singular: 'Day',
