@@ -91,7 +91,7 @@ var NomieUOM = function() {
 				if (v < 3600) {
 					return v + 's';
 				} else {
-					return (v / 60).toFixed(0) + 'm';
+					return Math.round((v / 60)*100)/100 + 'm';
 				}
 			}
 		},
@@ -106,7 +106,7 @@ var NomieUOM = function() {
 				if (v < 60) {
 					return v + 'm';
 				} else if (v > 60 && v < 1441) {
-					return (v / 60).toFixed(1) + 'h';
+					return Math.round((v / 60)*100)/100 + 'h';
 				} else if (v > 1440) {
 					return (v / 1440).toFixed(0) + 'd';
 				} else {
@@ -123,7 +123,7 @@ var NomieUOM = function() {
 			symbolSpace: false,
 			display: function(v) {
 				if (v < 168) {
-					return v.toFixed(1) + 'h';
+					return Math.round(v*100)/100 + 'h';
 				} else {
 					return (v / 24).toFixed(0) + 'd';
 				}
