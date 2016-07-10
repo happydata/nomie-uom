@@ -123,7 +123,7 @@ var NomieUOM = function() {
 			symbolSpace: false,
 			display: function(v) {
 				if (v < 168) {
-					return v.toFixed(0) + 'h';
+					return v.toFixed(1) + 'h';
 				} else {
 					return (v / 24).toFixed(0) + 'd';
 				}
