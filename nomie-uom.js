@@ -48,8 +48,8 @@ var NomieUOM = function() {
 			symbol: '$',
 			type: 'currency',
 			symbolAffix: 'pre',
-			display: function(v) {
-				return "$" + pub.addCommas((Number(v) === v && v % 1 !== 0) ? v.toFixed(2) : v);
+			display : function(v) {
+				return '$'+v.toFixed(2);
 			}
 		},
 		peso: {
@@ -57,28 +57,50 @@ var NomieUOM = function() {
 			plural: 'Peso',
 			symbol: '$',
 			type: 'currency',
-			symbolAffix: 'pre'
+			symbolAffix: 'pre',
+			display : function(v) {
+				return '$'+v.toFixed(2);
+			}
 		},
 		cpound: {
 			singular: 'Pound',
 			plural: 'Pounds',
 			symbol: '£',
 			type: 'currency',
-			symbolAffix: 'pre'
+			symbolAffix: 'pre',
+			display : function(v) {
+				return '£'+v.toFixed(2);
+			}
+		},
+		rupee: {
+			singular: 'Rupee',
+			plural: 'Rupees',
+			symbol: '₹',
+			type: 'currency',
+			symbolAffix: 'pre',
+			display : function(v) {
+				return '₹'+v.toFixed(2);
+			}
 		},
 		yen: {
 			singular: 'Yen',
 			plural: 'Yen',
 			symbol: '¥',
 			type: 'currency',
-			symbolAffix: 'pre'
+			symbolAffix: 'pre',
+			display : function(v) {
+				return '¥'+v.toFixed(2);
+			}
 		},
 		euro: {
 			singular: 'Euro',
 			plural: 'Euros',
 			symbol: '€',
 			type: 'currency',
-			symbolAffix: 'pre'
+			symbolAffix: 'pre',
+			display : function(v) {
+				return '€'+v.toFixed(2);
+			}
 		},
 		timer: {
 			singular: 'Time',
@@ -368,7 +390,7 @@ var NomieUOM = function() {
 	/**
 	 * pub.addCommas
 	 * Formats a number with commas
-	 * 
+	 *
 	 * @param {number} Number to format
 	 */
 	pub.addCommas = function(num) {
@@ -413,7 +435,7 @@ var NomieUOM = function() {
 				} else {
 					return value;
 				}
-			} // end if the uom has it's own display 
+			} // end if the uom has it's own display
 		} else {
 			return value;
 		}
