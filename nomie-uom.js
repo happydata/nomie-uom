@@ -62,6 +62,16 @@ var NomieUOM = function() {
 				return '$'+v.toFixed(2);
 			}
 		},
+		franc: {
+			singular: 'Franc',
+			plural: 'Francs',
+			symbol: 'Fr.',
+			type: 'currency',
+			symbolAffix: 'pre',
+			display : function(v) {
+				return 'Fr. '+v.toFixed(2);
+			}
+		},
 		cpound: {
 			singular: 'Pound',
 			plural: 'Pounds',
