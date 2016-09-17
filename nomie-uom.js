@@ -85,11 +85,11 @@ var NomieUOM = function() {
 		rupee: {
 			singular: 'Rupee',
 			plural: 'Rupees',
-			symbol: 'Rs.',
+			symbol: '₹.',
 			type: 'currency',
 			symbolAffix: 'pre',
 			display : function(v) {
-				return 'Rs. '+v.toFixed(2);
+				return '₹. '+v.toFixed(2);
 			}
 		},
 		yen: {
