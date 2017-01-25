@@ -1,0 +1,19 @@
+{
+  "name": "nomie-uom",
+  "version": "1.0.0",
+  "description": "Nomie's Unit of Measurement for Node",
+  "main": "nomie-uom.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/happydata/nomie-uom.git"
+  },
+  "author": "Happy Data <support@happydata.org> (nomie)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/happydata/nomie-uom/issues"
+  },
+  "homepage": "https://github.com/happydata/nomie-uom#readme"
+}
