@@ -3,7 +3,7 @@
  * @class NomieUOM
  * @namespace NomieUOM
  */
-var NomieUOM = function() {
+var _NomieUOM = function() {
 	/**
 	 * @namespace pub
 	 * @memberof NomieUOM
@@ -457,3 +457,9 @@ var NomieUOM = function() {
 	return pub;
 
 };
+
+if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
+    module.exports = new _NomieUOM();
+}  else {
+    window.NomieUOM = new _NomieUOM();
+}
