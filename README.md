@@ -1,7 +1,10 @@
 # Nomie's Unit of Measurement module.
-Units of Measure for Nomie
 
-This is a simple JS Class for interacting with Nomie's UOM. Unit of Measurement (UOM) tell Nomie how to display data from a given tracker - for example Dollars, Centimeters, Celcius, etc. 
+This is a simple JS Class for interacting with Nomie's UOM. Unit of Measurement (UOM) tell Nomie how to display data from a given tracker
+
+## Currently available
+
+Count,Reps,Happys,Dollars,Peso,Francs,Pounds,Rupees,Yen,Euros,Time,Seconds,Minutes,Hours,Days,Millimeters,Centimeters,Meter,Kilometers,Inches,Celsius,Fahrenheit,Feet,Yards,Miles,Milligrams,Grams,Kilograms,Stones,Stones,Ounces,Pounds,Cups,Fluid Ounces,Pints,Quarts,Gallons,Liters,Milliliters
 
 ## Displaying a formated value. 
 
