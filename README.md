@@ -12,7 +12,7 @@ Count,Reps,Happys,Dollars,Peso,Francs,Pounds,Rupees,Yen,Euros,Time,Seconds,Minut
 var uom = new NomieUOM();
 ```
 
-### Display a formated value 
+### Display a formatted value 
 
 Let's say you have a value of ``55`` and a tracker with a uom of ``dollars``
 ```
