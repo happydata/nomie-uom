@@ -36,6 +36,13 @@ var _NomieUOM = function() {
 			symbol: 'reps',
 			type: 'general'
 		},
+		percent: {
+			singular: 'Percent',
+			plural: 'Percent',
+			symbol: '%',
+			type: 'general',
+			symbolAffix: 'post'
+		},
 		happys: {
 			singular: 'Happy',
 			plural: 'Happys',
