@@ -233,6 +233,14 @@ var _NomieUOM = function() {
 			symbolAffix: 'post',
 			symbolSpace: true
 		},
+		degrees: {
+			singular: 'Degree',
+			plural: 'Degrees',
+			symbol: '°',
+			type: 'temperature',
+			symbolAffix: 'post',
+			symbolSpace: false
+		},
 		celsius: {
 			singular: 'Celsius',
 			plural: 'Celsius',
