@@ -437,7 +437,7 @@ var _NomieUOM = function() {
 	 * Display Formated Value of a UOM and a Value
 	 */
 	pub.displayValue = function(key, value) {
-		if (pub.uoms.hasOwnProperty(key) && value) {
+		if (pub.uoms.hasOwnProperty(key) && !isNaN(value)) {
 			//console.log("### UOM ### UOM TYPE FOUND", key);
 			var symbol = pub.uoms[key].symbol || null;
 			var affix = pub.uoms[key].symbolAffix || null;
