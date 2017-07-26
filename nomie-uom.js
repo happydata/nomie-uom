@@ -453,7 +453,7 @@ var _NomieUOM = function() {
 				if (!isNaN(parseFloat(value)) && isFinite(value) && value !== 0) {
 					value = pub.addCommas(value);
 				}
-				if (affix && symbol && value) {
+				if (affix && symbol) {
 					if (affix == 'pre') {
 						return symbol + space + value;
 					} else {

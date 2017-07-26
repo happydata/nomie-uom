@@ -5,5 +5,7 @@ declare namespace nomieUOM {
 	function singular(key:String): String;
 	function abv(key:String): String;
 	function addCommas(num:Number): String;
-	function displayValue()
+	function displayValue(uom:any, value:Number);
+	export var uoms: any;
 }
+export = nomieUOM;

@@ -1,7 +1,7 @@
 {
   "name": "nomie-uom",
-  "version": "1.0.1",
-  "description": "Unit of Measurement for Nomie",
+  "version": "1.0.2",
+  "description": "Unit of Measure for Nomie",
   "main": "nomie-uom.js",
 	"typings": "nomie-uom.d.ts",
   "scripts": {
