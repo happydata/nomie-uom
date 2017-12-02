@@ -341,7 +341,9 @@ var _NomieUOM = function() {
 			singular: 'Fluid Ounce',
 			plural: 'Fluid Ounces',
 			symbol: 'fl oz',
-			type: 'volume'
+			type: 'volume',
+			symbolAffix: 'post',
+			symbolSpace: true
 		},
 		pint: {
 			singular: 'Pint',
